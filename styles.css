@@ -1,0 +1,72 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url("./img/background.png") center/cover no-repeat;
+    filter: blur(1px); /* Làm mờ ảnh nền */
+    z-index: -1; /* Đưa về phía sau nội dung */
+}
+
+.content {
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 50px;
+}
+
+.glass-container {
+    background: rgba(57, 56, 51, 0.3); /* Màu nền mờ với độ trong suốt */
+    backdrop-filter: blur(10px); /* Làm mờ nền bên dưới */
+    border-radius: 15px; /* Bo góc */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 545px; /* Điều chỉnh theo thiết kế */
+    height: 370px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* Hiển thị chữ "7u4n" */
+.glow-text {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 255, 255, 0.6);
+}
+.social-icons {
+    display: flex;
+    justify-content: space-between; /* Cách đều các icon */
+    width: 50%; /* Điều chỉnh phù hợp để không quá sát mép */
+    position: absolute;
+    bottom: 20px; /* Cách viền dưới khung 20px */
+    left: 50%;
+    transform: translateX(-50%); /* Căn giữa theo chiều ngang */
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+}
+
+.social-icons a {
+    flex: 1; /* Để các icon chiếm không gian bằng nhau */
+    display: flex;
+    justify-content: center; /* Căn giữa icon trong ô */
+}
+
+.social-icons img {
+    width: 50px; /* Kích thước mặc định */
+    height: 50px;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    object-fit: contain; /* Đảm bảo không bị méo */
+}
