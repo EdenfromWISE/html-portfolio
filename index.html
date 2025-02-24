@@ -12,9 +12,18 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
-    <audio autoplay loop>
-      <source src = "./img/videoplayback.m4a" type="audio/mp4">
-    </audio>
+    <audio id="bgMusic">
+      <source src="./img/videoplayback.m4a" type="audio/mp4">
+  </audio>
+  
+  <script>
+      document.addEventListener("click", function () {
+          let audio = document.getElementById("bgMusic");
+          if (audio.paused) {
+              audio.play();
+          }
+      });
+  </script>
   </head>
   <body>
     <div class="background"></div>
