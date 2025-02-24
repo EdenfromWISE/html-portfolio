@@ -14,7 +14,13 @@ body, html {
     filter: blur(1px); /* Làm mờ ảnh nền */
     z-index: -1; /* Đưa về phía sau nội dung */
 }
-
+.avatar {
+    width: 150px;  /* Điều chỉnh kích thước theo ý muốn */
+    height: 150px; /* Giữ tỷ lệ 1:1 */
+    border-radius: 50%; /* Làm tròn góc để tạo thành hình tròn */
+    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+    margin-bottom: 15px;
+}
 .content {
     position: relative;
     text-align: center;
@@ -30,20 +36,24 @@ body, html {
     top: 50%;
     left: 50%;
     width: 545px; /* Điều chỉnh theo thiết kế */
-    height: 370px;
+    height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 20px 0;
 }
-
+.glass-container p{
+    margin: 0 0 75px 0;
+}
 
 /* Hiển thị chữ "7u4n" */
 .glow-text {
     font-size: 36px;
     font-weight: bold;
     color: white;
+    margin: 10px 0 5px 0;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
                  0 0 20px rgba(255, 255, 255, 0.6);
 }
